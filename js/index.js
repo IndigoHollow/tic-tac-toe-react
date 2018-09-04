@@ -12,7 +12,7 @@ class Board extends React.Component {
   constructor(props) {
     super(props);
     
-    //this.handleClick = this.handleClick.bind(this);
+    this.handleClick = this.handleClick.bind(this);
     
     this.state = {
       squares: Array(9).fill(null),
@@ -75,15 +75,10 @@ class Game extends React.Component {
         <div className="game-board">
           <Board />
         </div>
-        <div className="game-info">
-          <div>{/* status */}</div>
-          <ol>{/* TODO */}</ol>
-        </div>
       </div>
     );
   }
 }
-
 
 ReactDOM.render(
   <Game />,
